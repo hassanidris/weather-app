@@ -1,0 +1,174 @@
+/* 
+//
+//
+----------------  Root Styling ---------------- 
+//
+//
+*/
+:root {
+  --clr-prm-200-lightGray: hsl(0, 0%, 97%);
+  --clr-prm-500-azureBlue: hsl(211, 100%, 50%);
+  --clr-prm-400-trueBlue: hsl(211, 100%, 40%);
+  --clr-nut-100-white: hsl(0, 0%, 100%);
+  --clr-nut-700-darkGrayBlue: hsl(224, 30%, 27%);
+  --ff-montserrat: "Montserrat", sans-serif;
+  --fw-normal: 500;
+  --fw-bold: 700;
+  --fs-400: 1.125rem;
+  --fs-600: 1.5rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3rem;
+}
+
+/* 
+//
+//
+----------------  Reset Styling ---------------- 
+//
+//
+*/
+/* Source of the reset code: https://www.joshwcomeau.com/css/custom-css-reset/ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 
+//
+//
+----------------  Global Styling ---------------- 
+//
+//
+*/
+body {
+  font-family: var(--ff-montserrat);
+  background-color: var(--clr-prm-200-lightGray);
+  font-weight: var(--fw-normal);
+  color: var(--clr-nut-700-darkGrayBlue);
+}
+
+/* 
+//
+//
+----------------  Utilities Styling ---------------- 
+//
+//
+*/
+.container {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+//
+//
+----------------  Custom Styling ---------------- 
+//
+//
+*/
+.weather {
+  background-color: white;
+  box-shadow: 0 0 1.25em rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 0.5em;
+}
+.weather_title {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+  margin-bottom: 1em;
+}
+.weather_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.25em;
+}
+@media (max-width: 600px) {
+  .weather_form {
+    flex-direction: column;
+  }
+}
+.weather_form input[type=text] {
+  padding: 0.7em;
+  border: 1px solid #7f7f7f;
+  font-size: var(--fs-400);
+  width: 60%;
+}
+@media (max-width: 600px) {
+  .weather_form input[type=text] {
+    width: 100%;
+    margin-bottom: 0.7em;
+  }
+}
+.weather_form input[type=submit] {
+  background-color: var(--clr-prm-500-azureBlue);
+  color: var(--clr-nut-100-white);
+  border: none;
+  padding: 0.7em 1.25em;
+  border-radius: 0 5px 5px 0;
+  font-size: var(--fs-400);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 600px) {
+  .weather_form input[type=submit] {
+    border-radius: 5px;
+  }
+}
+.weather_form input[type=submit]:hover {
+  background-color: var(--clr-prm-400-trueBlue);
+}
+.weather_temperature {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+  margin: 1.25em 0;
+}
+.weather_icon {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.weather_icon img {
+  width: 150px;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.weather_desc {
+  font-size: var(--fs-600);
+  margin-bottom: 1.25em;
+}
+.weather_details {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.weather_details > div {
+  padding: 1.25em;
+  background-color: #f1f1f1;
+  margin: 0.7em;
+  flex: 1;
+  border-radius: 5px;
+  text-align: center;
+  min-height: 2.8em;
+}/*# sourceMappingURL=style.css.map */

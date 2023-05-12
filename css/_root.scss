@@ -1,0 +1,33 @@
+
+/* 
+//
+//
+----------------  Root Styling ---------------- 
+//
+//
+*/
+
+
+:root {
+
+    //  ### Primary
+    --clr-prm-200-lightGray: hsl(0, 0%, 97%);
+    --clr-prm-500-azureBlue: hsl(211, 100%, 50%);
+    --clr-prm-400-trueBlue: hsl(211, 100%, 40%);
+
+    //  ### Neutral
+    --clr-nut-100-white: hsl(0, 0%, 100%);
+    --clr-nut-700-darkGrayBlue: hsl(224, 30%, 27%);
+
+
+    //  ## Typography
+    --ff-montserrat: 'Montserrat', sans-serif;
+
+    --fw-normal: 500;
+    --fw-bold: 700;
+
+    --fs-400: 1.125rem;
+    --fs-600: 1.5rem;
+    --fs-800: 2.5rem;
+    --fs-900: 3rem;
+}

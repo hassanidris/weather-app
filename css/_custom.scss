@@ -1,0 +1,114 @@
+
+
+/* 
+//
+//
+----------------  Custom Styling ---------------- 
+//
+//
+*/
+
+
+.weather {
+    background-color: white;
+    box-shadow: 0 0 1.25em rgba(0,0,0,0.2);
+    padding: 3rem;
+    text-align: center;
+    border-radius: .5em;
+
+    &_title {
+        font-size: var(--fs-800);
+        font-weight: var(--fw-bold);
+        margin-bottom: 1em;
+    }
+
+    &_form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.25em;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
+
+        input[type="text"] {
+            padding: .7em;
+            border: 1px solid #7f7f7f;
+            // outline: none;
+            font-size: var(--fs-400);
+            width: 60%;
+
+            @media (max-width: 600px) {
+                width: 100%;
+                margin-bottom: .7em;
+            }
+        }
+
+        input[type="submit"] {
+            background-color: var(--clr-prm-500-azureBlue);
+            color: var(--clr-nut-100-white);
+            border: none;
+            padding: .7em 1.25em;
+            border-radius: 0 5px 5px 0;
+            font-size: var(--fs-400);
+            cursor: pointer;
+            outline: none;
+            transition: background-color .3s ease;
+
+            @media (max-width: 600px) {
+                border-radius: 5px;
+            }
+
+
+            &:hover {
+                background-color: var(--clr-prm-400-trueBlue);
+            }
+        }
+
+    }
+    &_temperature {
+        font-size: var(--fs-900);
+        font-weight: var(--fw-bold);
+        margin: 1.25em 0;
+    }
+
+    
+    &_icon {
+        
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+        img {
+            width: 150px;
+            height: auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    
+    &_desc {
+        font-size: var(--fs-600);
+        margin-bottom: 1.25em;
+    }
+    
+    &_details {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        
+        & > div {
+            padding: 1.25em;
+            background-color: #f1f1f1;
+            margin: .7em;
+            flex: 1;
+            border-radius: 5px;
+            text-align: center;
+            min-height: 2.8em;
+        }
+    }
+}
+
