@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
     <main class="container">
       <div class="weather">
         <h1 class="weather_title">Weather App</h1>
-        <form class="weather_form">
-          <input type="text" id="city-input" placeholder="Enter City" />
+        <form class="weather_form" id="weatherForm">
+          <input type="text" id="cityInput" placeholder="Enter City" />
           <input type="submit" value="Get Weather" />
         </form>
-        <div id="weather-data">
+        <div id="weatherData">
           <div class="weather_icon">
             <!-- <img
               src="http://openweathermap.org/img/wn/01d.png"
               alt="Weather Icon"
             /> -->
           </div>
-          <div class="weather_temperature"></div>
-          <div class="weather_desc"></div>
-          <div class="weather_details">
+          <div class="weather_temperature" id="weatherTemperature"></div>
+          <div class="weather_desc" id="weatherDesc"></div>
+          <div class="weather_details" id="weatherDetails">
             <!-- <div>Feels like: 23°C</div>
             <div>Humidity: 40%</div>
             <div>Wind speed: 5 m/s</div> -->
@@ -32,6 +32,6 @@
         </div>
       </div>
     </main>
-    <script src="./js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
