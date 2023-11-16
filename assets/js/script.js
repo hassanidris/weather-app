@@ -31,6 +31,7 @@ async function getWeatherData(city) {
 
     const data = await response.json();
 
+    const selectedCity = data.location.name;
     const temperature = Math.round(data.current.temp_c);
     const desc = data.current.condition.text;
     const icon = data.current.condition.icon;
@@ -44,6 +45,10 @@ async function getWeatherData(city) {
     weatherDataEl.querySelector(
       ".weather_icon"
     ).innerHTML = `<img src="${icon}" alt="Weather Icon" />`;
+
+    weatherDataEl.querySelector(
+      "#selectedCity"
+    ).textContent = `${selectedCity}`;
 
     weatherDataEl.querySelector(
       "#weatherTemperature"
