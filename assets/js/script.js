@@ -9,6 +9,8 @@ const formEl = document.querySelector("#weatherForm");
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
   const cityValue = cityInputEl.value;
+  cityInputEl.focus();
+  cityInputEl.value = "";
   getWeatherData(cityValue);
   console.log(cityValue);
 });
